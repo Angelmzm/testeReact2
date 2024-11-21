@@ -5,7 +5,6 @@ import ModalSucessoCriarProduto from './modalSucessoCompra';
 
 function ModalAdcProduto() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
     const [formData, setFormData] = useState({
         productname: '',
         price: '',
@@ -70,7 +69,6 @@ function ModalAdcProduto() {
     
             const data = await response.json();
             if (response.ok) {
-                setIsSuccessModalOpen(true); 
                 closeModal();
             } else {
                 console.log(data);
@@ -261,10 +259,6 @@ function ModalAdcProduto() {
                 </div>
             )}
 
-            {/* Modal de Sucesso */}
-            {isSuccessModalOpen && (
-                <ModalSucessoCriarProduto fecharModal={() => setIsSuccessModalOpen(false)} />
-            )}
         </div>
     );
 }
