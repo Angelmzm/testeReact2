@@ -9,6 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js', // O nome do arquivo compilado
+    publicPath: '/testeReact2/'
   },
 
   // Configuração dos módulos para manipular diferentes tipos de arquivos
