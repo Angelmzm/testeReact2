@@ -9,27 +9,30 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js', // O nome do arquivo compilado
-    publicPath: '/testeReact2/'
+    publicPath: '/testeReact2/', // Para hospedar o app na subpasta do GitHub Pages
   },
+
+  // Modo de produção
+  mode: 'production',
 
   // Configuração dos módulos para manipular diferentes tipos de arquivos
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.scss$/, // Para arquivos .scss
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
+          'style-loader', // Injeção de CSS no DOM
+          'css-loader',   // Interpreta CSS
+          'sass-loader',  // Compila o SCSS para CSS
         ],
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.js$/, // Para arquivos JS
+        exclude: /node_modules/, // Exclui node_modules
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
+            presets: ['@babel/preset-env', '@babel/preset-react'], // Transpila o código
           },
         },
       },
@@ -47,13 +50,12 @@ module.exports = {
       },
     ],
   },
-  
 
   // Plugins para adicionar funcionalidades adicionais ao Webpack
   plugins: [
     new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'public', 'index.html'), // Garanta que ele aponte para o arquivo correto
-      }),
+      template: path.resolve(__dirname, 'public', 'index.html'), // Caminho correto para index.html
+    }),
   ],
 
   // Definições de ambiente de desenvolvimento

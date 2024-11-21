@@ -14,25 +14,26 @@ import AdmProdutoPage from "./pages/admProdutoPage";
 import MainPage from "./pages/mainPage";
 import CarrinhoPage from "./pages/carrinhoPage";
 
+
 function App() {
   return (
-    <Router basename="/testeReact2">
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/admMainPage" element={<AdmMainPage />} />
-        <Route path="/loginPage" element={<LoginPage />} />
-        <Route path="/cadastroPage" element={<CadastroPage />} />
-        <Route path="/lancamentoPage" element={<LancamentoPage />} />
-        <Route path="/maisVendidosPage" element={<MaisVendidosPage />} />
-        <Route path="/maquiagemPage" element={<MaquiagemPage />} />
-        <Route path="/unhasPage" element={<UnhasPage />} />
-        <Route path="/cabeloPage" element={<CabeloPage />} />
-        <Route path="/perfumePage" element={<PerfumePage />} />
-        <Route path="/produtoPage/:id" element={<ProdutoPage />} />
-        <Route path="/admProdutoPage/:id" element={<AdmProdutoPage />} />
-        <Route path="/carrinhoPage" element={<CarrinhoPage />} />
+        
+        <Route path="/testeReact2" element={<MainPage />} />
+        <Route path="/testeReact2/admMainPage" element={<AdmMainPage />} />
+        <Route path="/testeReact2/loginPage" element={<LoginPage />} />
+        <Route path="/testeReact2/cadastroPage" element={<CadastroPage />} />
+        <Route path="/testeReact2/lancamentoPage" element={<LancamentoPage />} />
+        <Route path="/testeReact2/maisVendidosPage" element={<MaisVendidosPage />} />
+        <Route path="/testeReact2/maquiagemPage" element={<MaquiagemPage />} />
+        <Route path="/testeReact2/unhasPage" element={<UnhasPage />} />
+        <Route path="/testeReact2/cabeloPage" element={<CabeloPage />} />
+        <Route path="/testeReact2/perfumePage" element={<PerfumePage />} />
+        <Route path="/testeReact2/produtoPage/:id" element={<ProdutoPage />} />
+        <Route path="/testeReact2/admProdutoPage/:id" element={<AdmProdutoPage />} />
+        <Route path="/testeReact2/carrinhoPage" element={<CarrinhoPage />} />
+        
       </Routes>
-    </Router>
   );
 }
 

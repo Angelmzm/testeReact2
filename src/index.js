@@ -5,7 +5,7 @@ import App from "./app";
 
 const root = ReactDOM.createRoot(document.getElementById("root")); // Criar a raiz com createRoot
 root.render(
-  <Router>
+  <Router basename="/testeReact2">
     <App />
   </Router>
 );
